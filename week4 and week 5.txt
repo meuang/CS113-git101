@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int x = 100;//ควรประกาศตัวแปรให้ทุกตัวเห็น
+int addTen(int x)//ฟังชั่นโปรโตไทป
+{
+    x = x + 10;//ในปีกกาคือฟังชั่นบอดี้ทั้งหมดคือการนิยามฟังชั่น
+    return x;
+}
+int addTewnty();//เป็นอีกวิธีในการสร้างฟังชั่นเป็นเหมือนประกาศตัวแปร
+
+int main()
+{
+    int x = 30;
+    int y = addTen(x);
+    printf("addTen main = %d\n",y);
+    int z = addTewnty();
+    printf("addTwenty main = %d\n",z);
+
+}
+int addTewnty(){
+    int x =+ 20;
+    printf("addTwenty main = %d\n",x);
+    return x;
+}
+//ฟังชันจะไม่วิ่งไปทำงานกับฟังชั่นอื่นนอกจากเรียกมัน
+//เมื่อฟังชั่นทำงานเสร็จจะลบค่านั้นทิ้ง
