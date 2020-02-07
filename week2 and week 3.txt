@@ -1,0 +1,59 @@
+﻿#include <stdio.h>//เรียนเรื่องการรับค่า
+#include <stdlib.h>
+char name[20];
+char number[5];
+int main(){
+
+int n;
+//printf("Enter name : ");
+//gets(name);
+//fgets(name,20,stdin);//เอาไว้รับค่าเป็นค่าอะไรก็ได้เช่นไฟล์ก็ได้
+//printf("name = %s",name);
+
+//fgets(number , 5 , stdin);
+//int i = atoi(number); //เอาไว้แปลงตัวเลข
+//double d = atof(number);
+//long l = atol(number);
+//printf("number = %s, i = %d",number , i);// ถ้าเราต้องการเก็บค่าต้องเผื่อพื้นที่เอาไว้สำหรับ \0 ด้วย
+
+//puts(number);
+//putchar('a'); // putchar('c');
+
+// int found = 0;//0`คือflase ที่เหลือคือ true
+// float isExist = 0.0;
+// char c = '\0';
+
+// fgets(number , 5 , stdin);
+// int i = atoi(number); 
+// if (i > 0 && i < 10){
+//     printf("if\n");
+
+// }else if (i >= 10 || !found ){
+//     printf("else if \n");
+
+// }else {
+//     printf("else");
+// }
+// if (i > 'a'){
+//     printf('>a\n');
+
+// }
+
+fgets(number,5,stdin);
+int i = atoi(number);
+
+// int count = 0;
+// while (count < i){
+//     printf("%d\n",count);
+//     count++;//ทำงานเสร็จค่อยบวก
+//     //++count;//บวกก่อนค่อยคำคำสั่ง
+// }
+
+for (int j = 0; j < i; j++){
+    printf("%d\n",j);
+}
+while(1){
+    fgets(number,5,stdin);
+    
+}
+}
