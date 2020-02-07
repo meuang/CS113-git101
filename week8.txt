@@ -1,0 +1,12 @@
+Git
+การสร้าง directory ใช้คำสั่ง myapp
+ดูรายการใช้ dir
+เปลี่ยน working directory ใช้ cd ตามด้วยสิ่งที่ต้องการเปลี่ยน
+การเพิ่ม commit ให้ใช้ git add แล้วใช้คำสั่ง git status ต่อ
+ตั้งค่าชื่อและอีเมลเพื่อระบุตัวตนใช้
+git config user.name และ git config user.email
+ดู checkpoint ด้วย git log --all --decorate --oneline --graph
+เชื่อม local repository โดยใช้คำสั่ง git remote add <ชื่อ remote เช่น origin> <git url>
+การเชื่อม local ในเครื่อง กับ remote ที่ github ได้แล้ว ให้ส่งไฟล์และประวัติไปเก็บที่ github ด้วยคำสั่ง git pushgit push -u origin master
+การนำกลับมาบางไฟล์ก่อน โดยใช้คำสั่ง (<commit-id> เป็น commit-id อันแรกสุดเลย) git checkout <commit-id> a.txt
+เมื่อจะเปลี่ยนเครื่องในการใช้งานให้ใช้คำสั่ง git clone <git-url>
