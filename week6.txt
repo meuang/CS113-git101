@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    // int x = 100;
+    // int a = 0144;//ขึ้นด้นด้วย0เป็นเลขฐาน8
+    // int b = 0x64;//ขึ้นต้นด้วย0xเป็นฐาน16
+    // printf("x = %d\n",x);
+    // printf("reference = %lu\n", &x);//&เป็นการดูที่อยู่ของxใช้ได้กับทีละตัว
+    // printf("reference = %p\n", &x);//%pใช้ในการหาที่อยู่โดยเฉพาะและก็มี%xที่ใช้ได้
+
+    
+    // //ที่อยู address
+    // int number[] = {4,5,6,7,8};// array
+    // char input[100];
+
+    // printf("reference number = %p\n", number);
+    // printf("reference &number[0] = %p\n", &number[0]);
+
+    // printf("index 2 = %d\n",number[2]);//index = ตำแหน่งในarray adderssจะบวกไปเท่ากับขนาดชนิดของมันคือถ้าint index ของมันจะบวกไป 4bin
+    // printf("reference &number[0] = %p\n", number + 2);
+
+    // //pointer คือการเรียกที่อยู่ของตัวแปรที่้ราต้องการ
+    // int *ptr = &x;//การที่จะใช้pointerจะต้องมี * ด้วย
+    // int *arrPtr;//ถ้ามี * คือการหาค่าของที่อยู่ตัวนั้นของตอนprintfถ้าไม่มีก็คือการเรียกที่อยู่ของตัวนั้น
+    // arrPtr = number;
+    // //&x = 500; ทำไม่ได้แบบนี้
+    // printf("ptr = %p ,value = %d \n",ptr,*ptr);
+    // number[2] = 500;//จะเปลี่ยนindexตัวที่2ให้เป็นค่า500
+    // *(arrPtr+2) = 500;
+    // printf("arrPtr + 2 = %p ,value = %d \n",arrPtr + 2,*(arrPtr+2));
+
+    // int number[] = {4,5,6,7,8};
+    // char input[100];
+    // for (int *ptr = number; ptr <= &number[4]; ptr++){
+    //     printf("[%p] = %d\n",ptr , *ptr);
+    // }
+    
+    // int count = 0;
+    // char c;
+    // while ((c = getchar()) != '\n'){
+    //     input[count] = c;
+    //     ++count;
+    // }
+    // printf("char arr = %s\n",input);
+    // for (char *cPtr = input;*cPtr != '\0';cPtr++){
+    //     printf("%c\n",*cPtr);
+    // }
+
+    int a;
+    char c;
+    char s[100];
+    scanf("%d-%c-%s",&a,&c,s);
+    printf("%d %c %s",a,c,s);
+
+}
