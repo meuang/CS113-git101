@@ -1,0 +1,41 @@
+structs เป็น type ชนิดใหม่ที่สร้างขึ้นมาเอง
+The idea สรุปง่ายๆคือเราจะจำลองการสร้าง box ขี้นมา 1 box แล้วเราจะดูการทำงานตาม box ที่เรานั้นสร้างขึ้นมา
+struct BankRecord
+{
+char name[50]; จะมีขนาดเท่ากับ 50 bit
+float balance; จะมีขนาดเท่ากับ 8 bit 
+};
+
+int main()
+{
+struct BankRecord newAcc; อันนี้คือการสร้าง box ขึ้นมาที่ชื่อ BankRecord ใน box นั้นจะแบ่งเป็นสองอันคือ name กับ balance
+
+pri tf n (“E tn er account name: “);
+scanf(“%50s”, newAcc.name); อันนี้จะถูกเก็บไปอยู่ใน box ที่เรานั้นสร้างขึ้นมา จะถูกเก็บไว้ใน name
+printf(“Enter account balance: “);
+scanf( %d , “ ” &newAcc.balance newAcc.balance); อันนี้จะถูกเก็บไปอยู่ใน box ที่เรานั้นสร้างขึ้นมา จะถูกเก็บไว้ใน balance
+}
+
+Arrays of Structures
+struct entry {
+char fname [10] ;
+char lname [12] ;
+char phone [8] ;
+} ;
+struct entry list [1000];
+สรุปของcode ข้างบนคือ เราจะมี box ที่ชื่อ entry ทั้งหมด 1000 box ในแต่ละ box นั้นจะมี fname lname and phone 
+เอาไว้สำหรับเก็บข้อมูลเป็นชุดๆและเปลี่ยนเป็นชุดๆ
+Pointers to Structures
+struct part {
+float price ;
+char name [10] ;
+} ;
+struct part * p, *q;
+p = (struct part *) malloc( sizeof(struct part) ); นี้คือการจองพื้นที่ที่มีขนาดเท่ากับขนาดของ struct part
+q = (struct part *) malloc( sizeof(struct part) );นี้คือการจองพื้นที่ที่มีขนาดเท่ากับขนาดของ struct part
+p -> price = 199.99 ; อันนี้จะชี้ไปที่ price ใน box part เพื่อให้ในนั้นมีค่าเท่ากับ 199.99
+strcpy( p -> name, "hard disk" );อันนี้คือการก็อปปี้สตริงคำว่า hard disk แล้วจะถูกเก็บไปที่ name
+(*q) = (*p); จะก็อป ponter p
+q = p; q จะมีค่าเท่ากับ p
+free(p);ลบข้อมูลทิ้ง
+free(q);ลบข้อมูลทิ้ง
