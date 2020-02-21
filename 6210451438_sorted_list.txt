@@ -1,0 +1,52 @@
+//6210451438 Rachapol Thongpon
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+   int data;
+   struct node *next;
+};
+int fun(struct node **first,int n){
+   struct node *temp = (struct node*)malloc(sizeof(struct node));
+   temp->data = n;
+   if (*first == NULL){
+      temp->next = *first;
+      *first = temp;
+   }else{
+      struct node *tmp = *first;
+      struct node *last = NULL;
+      while (1) {
+            if (tmp == NULL || tmp->data >= temp->data){
+                break;
+            }
+            last = tmp;
+            tmp = tmp->next; 
+        }
+        temp->next = tmp;
+        if (last != NULL)
+            last->next = temp;
+        else 
+            *first = temp;
+   }
+}
+int output(struct node *first){
+   struct node *temp = first;
+    while(temp != NULL)
+    {
+        printf("%d\n",temp->data);
+        temp = temp->next;
+    }
+}
+int main(){
+    struct node * first = NULL;
+    int n;
+    while (scanf("%d", &n) == 1) {
+        if (n <= -1){
+        break;
+        }else{
+            fun(&first,n);
+        }
+    }
+    output(first);
+}
